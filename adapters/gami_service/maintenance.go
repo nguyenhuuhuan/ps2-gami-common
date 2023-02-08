@@ -5,8 +5,8 @@ import (
 	"errors"
 	"net/http"
 
-	gamiProtobuf "gitlab.id.vin/gami/gami-proto/pb"
 	"gitlab.id.vin/gami/ps2-gami-common/dtos"
+	gamiProtobuf "gitlab.id.vin/gami/ps2-gami-proto/pb"
 )
 
 type MaintenanceStatusCampaignRequest struct {

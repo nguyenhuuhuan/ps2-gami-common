@@ -6,7 +6,7 @@ import (
 
 	"github.com/jinzhu/copier"
 
-	gami_protobuf "gitlab.id.vin/gami/gami-proto/pb"
+	gami_protobuf "gitlab.id.vin/gami/ps2-gami-proto/pb"
 
 	"gitlab.id.vin/gami/ps2-gami-common/dtos"
 )

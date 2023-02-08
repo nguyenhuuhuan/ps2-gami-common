@@ -3,8 +3,8 @@ package gami_service
 import (
 	"context"
 	"github.com/jinzhu/copier"
-	gami_protobuf "gitlab.id.vin/gami/gami-proto/pb"
 	"gitlab.id.vin/gami/ps2-gami-common/dtos"
+	gami_protobuf "gitlab.id.vin/gami/ps2-gami-proto/pb"
 	"net/http"
 )
 

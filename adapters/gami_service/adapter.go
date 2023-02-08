@@ -3,9 +3,9 @@ package gami_service
 import (
 	"context"
 
-	"gitlab.id.vin/gami/gami-proto/grpc_client"
-	gamiProtobuf "gitlab.id.vin/gami/gami-proto/pb"
 	"gitlab.id.vin/gami/ps2-gami-common/errors"
+	"gitlab.id.vin/gami/ps2-gami-proto/grpc_client"
+	gamiProtobuf "gitlab.id.vin/gami/ps2-gami-proto/pb"
 
 	"github.com/go-kit/kit/endpoint"
 	"google.golang.org/grpc"
@@ -30,6 +30,7 @@ type Adapter interface {
 	GetBlackWhiteList(ctx context.Context, campaignID int64) (*GetBlackWhiteListResponse, error)
 	GetRewardsByCampaignID(ctx context.Context, req GetRewardsByCampaignIDRequest) (*GetRewardsByCampaignIDResponse, error)
 	GetCampaignByUserV2(ctx context.Context, id, userID int64) (*GetCampaignResponse, error)
+	GetTenant(ctx context.Context, req GetTenantRequest) (*GetTenantResponse, error)
 }
 
 type adapter struct {
@@ -51,6 +52,7 @@ type adapter struct {
 	GetBlackWhiteListEndpoint             endpoint.Endpoint
 	GetRewardsByCampaignIDEndpoint        endpoint.Endpoint
 	GetCampaignByUserV2Endpoint           endpoint.Endpoint
+	GetTenantEndpoint                     endpoint.Endpoint
 }
 
 func (a *adapter) GetBlackWhiteList(ctx context.Context, campaignID int64) (*GetBlackWhiteListResponse, error) {
@@ -229,6 +231,16 @@ func (a *adapter) GetCampaignByUserV2(ctx context.Context, id, userID int64) (*G
 	return r, nil
 }
 
+func (a *adapter) GetTenant(ctx context.Context, req GetTenantRequest) (*GetTenantResponse, error) {
+	response, err := a.GetTenantEndpoint(ctx, &req)
+	if err != nil {
+		return nil, err
+	}
+
+	r := response.(*GetTenantResponse)
+	return r, nil
+}
+
 // NewAdapter returns a new instance of NewAdapter.
 func NewAdapter(ctx context.Context, connection *grpc.ClientConn) Adapter {
 	return &adapter{
@@ -346,6 +358,13 @@ func NewAdapter(ctx context.Context, connection *grpc.ClientConn) Adapter {
 			encodeGetCampaignUserRequest,
 			decodeGetCampaignResponse,
 			gamiProtobuf.GetCampaignResponse{},
+		).Endpoint(),
+		GetTenantEndpoint: grpc_client.NewgRPCClient(
+			connection, "gami_protobuf.TenantService",
+			"GetTenant",
+			encodeGetTenantRequest,
+			decodeGetTenantResponse,
+			gamiProtobuf.GetTenantResponse{},
 		).Endpoint(),
 	}
 }
