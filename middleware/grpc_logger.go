@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"time"
 
-	"gitlab.id.vin/gami/gami-common/logger"
+	"gitlab.id.vin/gami/ps2-gami-common/logger"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/metadata"

@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/Workiva/go-datastructures/queue"
-	"gitlab.id.vin/gami/gami-common/logger"
+	"gitlab.id.vin/gami/ps2-gami-common/logger"
 )
 
 type SlidingWindowConfig struct {

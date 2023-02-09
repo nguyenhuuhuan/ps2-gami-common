@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"gitlab.id.vin/gami/gami-common/utils/ctxutil"
+	"gitlab.id.vin/gami/ps2-gami-common/utils/ctxutil"
 
-	"gitlab.id.vin/gami/gami-common/errors"
+	"gitlab.id.vin/gami/ps2-gami-common/errors"
 
 	"github.com/gin-gonic/gin"
 )

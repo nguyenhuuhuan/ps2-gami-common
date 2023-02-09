@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/go-redis/redis/v8"
-	"gitlab.id.vin/gami/gami-common/adapters/cache"
-	"gitlab.id.vin/gami/gami-common/logger"
-	"gitlab.id.vin/gami/gami-common/ratelimit"
+	"gitlab.id.vin/gami/ps2-gami-common/adapters/cache"
+	"gitlab.id.vin/gami/ps2-gami-common/logger"
+	"gitlab.id.vin/gami/ps2-gami-common/ratelimit"
 )
 
 func main() {

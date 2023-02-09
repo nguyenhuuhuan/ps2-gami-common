@@ -5,11 +5,11 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"gitlab.id.vin/gami/gami-common/configs"
+	"gitlab.id.vin/gami/ps2-gami-common/configs"
 	"io"
 	"time"
 
-	"gitlab.id.vin/gami/gami-common/models"
+	"gitlab.id.vin/gami/ps2-gami-common/models"
 
 	"cloud.google.com/go/storage"
 	"github.com/google/uuid"

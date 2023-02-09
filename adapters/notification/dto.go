@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
-	"gitlab.id.vin/gami/gami-common/configs"
+	"gitlab.id.vin/gami/ps2-gami-common/configs"
 	"io/ioutil"
 	"net/http"
 )

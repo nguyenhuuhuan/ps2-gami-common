@@ -13,8 +13,8 @@ import (
 	"net/url"
 	"strings"
 
-	"gitlab.id.vin/gami/gami-common/dtos"
-	"gitlab.id.vin/gami/gami-common/logger"
+	"gitlab.id.vin/gami/ps2-gami-common/dtos"
+	"gitlab.id.vin/gami/ps2-gami-common/logger"
 )
 
 const (

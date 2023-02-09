@@ -4,10 +4,10 @@ import (
 	"context"
 	"time"
 
-	"gitlab.id.vin/gami/gami-common/adapters/cache"
-	"gitlab.id.vin/gami/gami-common/adapters/gami_service"
-	"gitlab.id.vin/gami/gami-common/logger"
-	"gitlab.id.vin/gami/gami-common/models"
+	"gitlab.id.vin/gami/ps2-gami-common/adapters/cache"
+	"gitlab.id.vin/gami/ps2-gami-common/adapters/gami_service"
+	"gitlab.id.vin/gami/ps2-gami-common/logger"
+	"gitlab.id.vin/gami/ps2-gami-common/models"
 )
 
 const (
