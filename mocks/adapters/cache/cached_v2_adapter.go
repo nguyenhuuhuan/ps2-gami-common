@@ -1481,6 +1481,10 @@ func (_m *CachedV2Adapter) ZScore(ctx context.Context, key string, member string
 	return r0, r1
 }
 
+func (_m *CachedV2Adapter) LRem(ctx context.Context, key string, val interface{}) (int64, error) {
+	return 0, nil
+}
+
 type mockConstructorTestingTNewCachedV2Adapter interface {
 	mock.TestingT
 	Cleanup(func())
