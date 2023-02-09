@@ -12,6 +12,7 @@ require (
 	github.com/dgrijalva/jwt-go/v4 v4.0.0-preview1
 	github.com/gin-gonic/gin v1.7.0
 	github.com/go-kit/kit v0.11.0
+	github.com/go-playground/validator/v10 v10.4.1
 	github.com/go-redis/redis/v8 v8.11.4
 	github.com/go-redsync/redsync v1.3.1
 	github.com/gomodule/redigo v2.0.0+incompatible
@@ -21,6 +22,8 @@ require (
 	github.com/json-iterator/go v1.1.11
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/kjk/betterguid v0.0.0-20170621091430-c442874ba63a
+	github.com/lib/pq v1.3.0 // indirect
+	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/rs/xid v1.2.1
 	github.com/satori/go.uuid v1.2.0
 	github.com/spaolacci/murmur3 v0.0.0-20180118202830-f09979ecbc72
@@ -28,10 +31,9 @@ require (
 	github.com/stretchr/testify v1.7.0
 	github.com/vmihailenco/msgpack/v5 v5.1.0
 	gitlab.id.vin/gami/demeter v1.0.2
-	gitlab.id.vin/gami/gami-proto v1.1.29 // indirect
 	gitlab.id.vin/gami/go-agent/v3 v3.3.0
 	gitlab.id.vin/gami/go-agent/v3/integrations/nrmysql v0.0.0-20220107092240-98da8feaa550
-	gitlab.id.vin/gami/ps2-gami-proto v0.0.1
+	gitlab.id.vin/gami/ps2-gami-proto v0.0.2
 	go.opencensus.io v0.23.0
 	go.uber.org/zap v1.17.0
 	google.golang.org/api v0.49.0
