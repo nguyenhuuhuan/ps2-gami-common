@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/go-playground/validator/v10"
-	"gitlab.id.vin/gami/ps2-gami-common/models"
+	"gitlab.id.vin/gami/gami-common/models"
 )
 
 const (

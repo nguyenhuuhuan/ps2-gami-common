@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 
-	"gitlab.id.vin/gami/ps2-gami-common/gobreaker"
+	"gitlab.id.vin/gami/gami-common/gobreaker"
 )
 
 var cb *gobreaker.CircuitBreaker

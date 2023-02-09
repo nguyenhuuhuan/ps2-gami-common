@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"gitlab.id.vin/gami/ps2-gami-common/adapters/cache"
+	"gitlab.id.vin/gami/gami-common/adapters/cache"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -14,9 +14,9 @@ import (
 
 	"github.com/go-kit/kit/endpoint"
 	httptransport "github.com/go-kit/kit/transport/http"
-	"gitlab.id.vin/gami/ps2-gami-common/adapters/user"
-	"gitlab.id.vin/gami/ps2-gami-common/configs"
-	"gitlab.id.vin/gami/ps2-gami-common/logger"
+	"gitlab.id.vin/gami/gami-common/adapters/user"
+	"gitlab.id.vin/gami/gami-common/configs"
+	"gitlab.id.vin/gami/gami-common/logger"
 )
 
 // Const Path url

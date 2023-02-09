@@ -9,9 +9,9 @@ import (
 	"net/url"
 	"time"
 
-	"gitlab.id.vin/gami/ps2-gami-common/configs"
-	"gitlab.id.vin/gami/ps2-gami-common/dtos"
-	"gitlab.id.vin/gami/ps2-gami-common/logger"
+	"gitlab.id.vin/gami/gami-common/configs"
+	"gitlab.id.vin/gami/gami-common/dtos"
+	"gitlab.id.vin/gami/gami-common/logger"
 
 	"github.com/go-kit/kit/endpoint"
 	httptransport "github.com/go-kit/kit/transport/http"

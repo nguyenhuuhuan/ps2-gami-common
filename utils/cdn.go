@@ -3,8 +3,8 @@ package utils
 import (
 	"strings"
 
-	"gitlab.id.vin/gami/ps2-gami-common/configs"
-	"gitlab.id.vin/gami/ps2-gami-common/models"
+	"gitlab.id.vin/gami/gami-common/configs"
+	"gitlab.id.vin/gami/gami-common/models"
 )
 
 const CDNMode = "/cdn-cgi/image/f=auto,fit=scale-down,quality=75/"

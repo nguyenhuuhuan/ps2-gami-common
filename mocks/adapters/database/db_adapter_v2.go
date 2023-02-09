@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	database "gitlab.id.vin/gami/ps2-gami-common/adapters/database"
+	database "gitlab.id.vin/gami/gami-common/adapters/database"
 	gorm "gorm.io/gorm"
 
 	mock "github.com/stretchr/testify/mock"

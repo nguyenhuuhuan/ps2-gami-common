@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	"gitlab.id.vin/gami/ps2-gami-common/adapters/queue"
+	"gitlab.id.vin/gami/gami-common/adapters/queue"
 )
 
 // Task represents a task

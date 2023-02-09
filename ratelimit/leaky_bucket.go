@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"gitlab.id.vin/gami/ps2-gami-common/logger"
+	"gitlab.id.vin/gami/gami-common/logger"
 )
 
 type LeakyBucketConfig struct {

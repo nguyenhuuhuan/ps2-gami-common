@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync/atomic"
 
-	"gitlab.id.vin/gami/ps2-gami-common/adapters/cache"
-	"gitlab.id.vin/gami/ps2-gami-common/logger"
+	"gitlab.id.vin/gami/gami-common/adapters/cache"
+	"gitlab.id.vin/gami/gami-common/logger"
 )
 
 type Limiter interface {

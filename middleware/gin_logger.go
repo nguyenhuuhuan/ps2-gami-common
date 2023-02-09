@@ -13,10 +13,10 @@ import (
 	"strings"
 	"time"
 
-	"gitlab.id.vin/gami/ps2-gami-common/utils/ctxutil"
+	"gitlab.id.vin/gami/gami-common/utils/ctxutil"
 
 	"github.com/gin-gonic/gin"
-	"gitlab.id.vin/gami/ps2-gami-common/logger"
+	"gitlab.id.vin/gami/gami-common/logger"
 )
 
 // Ginzap returns a gin.HandlerFunc (middleware) that logs requests using uber-go/zap.
@@ -25,8 +25,8 @@ import (
 // Requests without errors are logged using zap.Info().
 //
 // It receives:
-//  1. A time package format string (e.g. time.RFC3339).
-//  2. A boolean stating whether to use UTC time zone or local.
+//   1. A time package format string (e.g. time.RFC3339).
+//   2. A boolean stating whether to use UTC time zone or local.
 func GinLogger(utc bool, opts ...OpOption) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		var ctx context.Context

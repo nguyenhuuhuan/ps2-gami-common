@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"time"
 
+	"gitlab.id.vin/gami/gami-common/configs"
 	_ "gitlab.id.vin/gami/go-agent/v3/integrations/nrmysql"
-	"gitlab.id.vin/gami/ps2-gami-common/configs"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/plugin/dbresolver"

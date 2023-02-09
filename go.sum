@@ -482,12 +482,12 @@ github.com/yuin/goldmark v1.2.1/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9dec
 github.com/yuin/goldmark v1.3.5/go.mod h1:mwnBkeHKe2W/ZEtQ+71ViKU8L12m81fl3OWwC1Zlc8k=
 gitlab.id.vin/gami/demeter v1.0.2 h1:6MrgqSSOJGAe+KWpc8GUiZBS2xwmBvi7cGIdarHpX64=
 gitlab.id.vin/gami/demeter v1.0.2/go.mod h1:Tg37mthEFxD1hRUMcSIIM1w8zCRTsn87L7TlFNg+ICU=
+gitlab.id.vin/gami/gami-proto v1.1.29 h1:xnIdB7+nFlTHXdGCaXTtLgYbqA6jS/7RTRmgIGYS+3E=
+gitlab.id.vin/gami/gami-proto v1.1.29/go.mod h1:6hMwWAs56sdUsV1QN9VXxTcdwj1iZqawDk+LRHX1lZA=
 gitlab.id.vin/gami/go-agent/v3 v3.3.0 h1:2llK7lOG4ynOvNqA1nFfb87hELRWd/b7Ur3gB6WKR88=
 gitlab.id.vin/gami/go-agent/v3 v3.3.0/go.mod h1:mjVpyswRG4QxrHOM0WRBRZOD4odXibENmXDhTNA1TyA=
 gitlab.id.vin/gami/go-agent/v3/integrations/nrmysql v0.0.0-20220107092240-98da8feaa550 h1:RJvRz6VZjKq6pZUwAO4c1gE1n4ssfJTZcL+GlZBP5is=
 gitlab.id.vin/gami/go-agent/v3/integrations/nrmysql v0.0.0-20220107092240-98da8feaa550/go.mod h1:nC6Ake6XhqwZTrsNOTRLmn93KP4lHXSNDxD/p3RH5vU=
-gitlab.id.vin/gami/ps2-gami-proto v0.0.2 h1:7bkEe722m4p++KT6f1YpP/WjasxzoAfINMLvTWbBwtE=
-gitlab.id.vin/gami/ps2-gami-proto v0.0.2/go.mod h1:s/DUjQZFCCfsGix00lTqYoK9ac0j2q1pI870GUK+RNk=
 go.etcd.io/etcd/api/v3 v3.5.0/go.mod h1:cbVKeC6lCfl7j/8jBhAK6aIYO9XOjdptoxU/nLQcPvs=
 go.etcd.io/etcd/client/pkg/v3 v3.5.0/go.mod h1:IJHfcCEKxYu1Os13ZdwCwIUTUVGYTSAM3YSwc9/Ac1g=
 go.etcd.io/etcd/client/v2 v2.305.0/go.mod h1:h9puh54ZTgAKtEbut2oe9P4L/oqKCVB6xsXlzd7alYQ=

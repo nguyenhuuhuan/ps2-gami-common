@@ -3,9 +3,9 @@ package gami_service
 import (
 	"context"
 
-	"gitlab.id.vin/gami/ps2-gami-common/errors"
-	"gitlab.id.vin/gami/ps2-gami-proto/grpc_client"
-	gamiProtobuf "gitlab.id.vin/gami/ps2-gami-proto/pb"
+	"gitlab.id.vin/gami/gami-common/errors"
+	"gitlab.id.vin/gami/gami-proto/grpc_client"
+	gamiProtobuf "gitlab.id.vin/gami/gami-proto/pb"
 
 	"github.com/go-kit/kit/endpoint"
 	"google.golang.org/grpc"
@@ -51,7 +51,6 @@ type adapter struct {
 	GetBlackWhiteListEndpoint             endpoint.Endpoint
 	GetRewardsByCampaignIDEndpoint        endpoint.Endpoint
 	GetCampaignByUserV2Endpoint           endpoint.Endpoint
-	GetTenantEndpoint                     endpoint.Endpoint
 }
 
 func (a *adapter) GetBlackWhiteList(ctx context.Context, campaignID int64) (*GetBlackWhiteListResponse, error) {

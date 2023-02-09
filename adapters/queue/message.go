@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"time"
 
-	"gitlab.id.vin/gami/ps2-gami-common/utils"
+	"gitlab.id.vin/gami/gami-common/utils"
 
 	uuid "github.com/satori/go.uuid"
 )

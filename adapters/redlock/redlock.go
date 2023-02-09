@@ -1,7 +1,7 @@
 package redlock
 
 import (
-	"gitlab.id.vin/gami/ps2-gami-common/configs"
+	"gitlab.id.vin/gami/gami-common/configs"
 
 	"github.com/go-redsync/redsync"
 	"github.com/gomodule/redigo/redis"

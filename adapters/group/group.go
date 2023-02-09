@@ -6,8 +6,8 @@ import (
 	"net/http"
 
 	"github.com/go-kit/kit/endpoint"
-	proto "gitlab.id.vin/gami/ps2-gami-proto/group"
-	"gitlab.id.vin/gami/ps2-gami-proto/grpc_client"
+	proto "gitlab.id.vin/gami/gami-proto/group"
+	"gitlab.id.vin/gami/gami-proto/grpc_client"
 	"google.golang.org/grpc"
 	"google.golang.org/protobuf/types/known/anypb"
 	"google.golang.org/protobuf/types/known/structpb"

@@ -6,12 +6,12 @@ import (
 	"net/http"
 	"strings"
 
-	"gitlab.id.vin/gami/ps2-gami-common/configs"
-	"gitlab.id.vin/gami/ps2-gami-common/dtos"
-	"gitlab.id.vin/gami/ps2-gami-common/errors"
-	"gitlab.id.vin/gami/ps2-gami-common/logger"
-	"gitlab.id.vin/gami/ps2-gami-common/utils"
-	"gitlab.id.vin/gami/ps2-gami-common/utils/ctxutil"
+	"gitlab.id.vin/gami/gami-common/configs"
+	"gitlab.id.vin/gami/gami-common/dtos"
+	"gitlab.id.vin/gami/gami-common/errors"
+	"gitlab.id.vin/gami/gami-common/logger"
+	"gitlab.id.vin/gami/gami-common/utils"
+	"gitlab.id.vin/gami/gami-common/utils/ctxutil"
 
 	"github.com/dgrijalva/jwt-go/v4"
 	"github.com/gin-gonic/gin"

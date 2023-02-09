@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	cache "gitlab.id.vin/gami/ps2-gami-common/adapters/cache"
+	cache "gitlab.id.vin/gami/gami-common/adapters/cache"
 
 	mock "github.com/stretchr/testify/mock"
 

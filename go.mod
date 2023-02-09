@@ -1,4 +1,4 @@
-module gitlab.id.vin/gami/ps2-gami-common
+module gitlab.id.vin/gami/gami-common
 
 go 1.16
 
@@ -31,9 +31,9 @@ require (
 	github.com/stretchr/testify v1.7.0
 	github.com/vmihailenco/msgpack/v5 v5.1.0
 	gitlab.id.vin/gami/demeter v1.0.2
+	gitlab.id.vin/gami/gami-proto v1.1.29
 	gitlab.id.vin/gami/go-agent/v3 v3.3.0
 	gitlab.id.vin/gami/go-agent/v3/integrations/nrmysql v0.0.0-20220107092240-98da8feaa550
-	gitlab.id.vin/gami/ps2-gami-proto v0.0.2
 	go.opencensus.io v0.23.0
 	go.uber.org/zap v1.17.0
 	google.golang.org/api v0.49.0
