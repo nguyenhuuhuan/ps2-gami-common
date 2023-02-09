@@ -4,7 +4,6 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/go-playground/validator/v10"
 	"gitlab.id.vin/gami/ps2-gami-common/models"
 )
 

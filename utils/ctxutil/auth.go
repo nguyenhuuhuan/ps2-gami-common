@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/dgrijalva/jwt-go/v4"
 	"gitlab.id.vin/gami/ps2-gami-common/dtos"
 )
 

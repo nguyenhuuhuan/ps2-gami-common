@@ -13,7 +13,6 @@ import (
 	"gitlab.id.vin/gami/ps2-gami-common/utils"
 	"gitlab.id.vin/gami/ps2-gami-common/utils/ctxutil"
 
-	"github.com/dgrijalva/jwt-go/v4"
 	"github.com/gin-gonic/gin"
 )
 

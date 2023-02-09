@@ -51,7 +51,6 @@ type adapter struct {
 	GetBlackWhiteListEndpoint             endpoint.Endpoint
 	GetRewardsByCampaignIDEndpoint        endpoint.Endpoint
 	GetCampaignByUserV2Endpoint           endpoint.Endpoint
-	GetTenantEndpoint                     endpoint.Endpoint
 }
 
 func (a *adapter) GetBlackWhiteList(ctx context.Context, campaignID int64) (*GetBlackWhiteListResponse, error) {
