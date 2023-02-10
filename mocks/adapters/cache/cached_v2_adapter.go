@@ -790,6 +790,27 @@ func (_m *CachedV2Adapter) LRange(ctx context.Context, key string, start int64, 
 	return r0, r1
 }
 
+// LRem provides a mock function with given fields: ctx, key, val
+func (_m *CachedV2Adapter) LRem(ctx context.Context, key string, val interface{}) (int64, error) {
+	ret := _m.Called(ctx, key, val)
+
+	var r0 int64
+	if rf, ok := ret.Get(0).(func(context.Context, string, interface{}) int64); ok {
+		r0 = rf(ctx, key, val)
+	} else {
+		r0 = ret.Get(0).(int64)
+	}
+
+	var r1 error
+	if rf, ok := ret.Get(1).(func(context.Context, string, interface{}) error); ok {
+		r1 = rf(ctx, key, val)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // MGet provides a mock function with given fields: ctx, keys
 func (_m *CachedV2Adapter) MGet(ctx context.Context, keys []string) ([]interface{}, error) {
 	ret := _m.Called(ctx, keys)
@@ -1479,10 +1500,6 @@ func (_m *CachedV2Adapter) ZScore(ctx context.Context, key string, member string
 	}
 
 	return r0, r1
-}
-
-func (_m *CachedV2Adapter) LRem(ctx context.Context, key string, val interface{}) (int64, error) {
-	return 0, nil
 }
 
 type mockConstructorTestingTNewCachedV2Adapter interface {
