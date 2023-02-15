@@ -13,8 +13,10 @@ type AdminServiceResponse struct {
 }
 
 type ResponseData struct {
-	IsValidToken bool               `json:"is_valid_token"`
-	UserID       int64              `json:"user_id"`
-	UserName     string             `json:"user_name"`
-	Permissions  map[string][]int64 `json:"permissions"`
+	Active   bool     `json:"active"`
+	Email    string   `json:"email"`
+	UserID   string   `json:"user_id"`
+	Tenant   string   `json:"tenant"`
+	UserName string   `json:"username"`
+	Scope    []string `json:"scope"`
 }
