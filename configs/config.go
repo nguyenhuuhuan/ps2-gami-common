@@ -155,8 +155,8 @@ type MakerChecker struct {
 }
 
 type AdminService struct {
-	BaseURL   string `default:"https://api-qc.int.vinid.dev/admin/v1" envconfig:"ADMIN_SERVICE_URL"`
-	Endpoint  string `default:"/token/introspect" envconfig:"ADMIN_SERVICE_ENDPOINT"`
+	BaseURL   string `default:"https://api-merchant-qc.int.vinid.dev/tcb-int/v1" envconfig:"ADMIN_SERVICE_URL"`
+	Endpoint  string `default:"/token/info" envconfig:"ADMIN_SERVICE_ENDPOINT"`
 	BasicAuth string `envconfig:"ADMIN_SERVICE_BASIC_AUTH"`
 }
 
