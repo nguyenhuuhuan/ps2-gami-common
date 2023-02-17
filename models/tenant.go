@@ -1,8 +1,19 @@
 package models
 
+type TenantStatus string
+
+const (
+	TenantStatusActive   TenantStatus = "ACTIVE"
+	TenantStatusInactive TenantStatus = "INACTIVE"
+)
+
 type Tenant struct {
 	Base
-	Name   string `json:"name"`
-	Code   string `json:"code"`
-	Status string `json:"status"`
+	Code   string       `json:"code"`
+	Name   string       `json:"name"`
+	Status TenantStatus `json:"status"`
+}
+
+func (Tenant) TableName() string {
+	return "tenants"
 }
