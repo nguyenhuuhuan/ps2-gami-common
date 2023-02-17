@@ -91,6 +91,7 @@ type Reward struct {
 	RewardPool  *RewardPool         `json:"reward_pool,omitempty"`
 	Wish        map[string]WishItem `gorm:"-"`
 	TagID       int64               `json:"tag_id"`
+	TenantID    int64               `json:"tenant_id"`
 }
 
 // Voucher model

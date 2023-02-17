@@ -86,6 +86,7 @@ const (
 // Campaign models
 type Campaign struct {
 	Base
+	TenantID        int64                   `json:"tenant_id"`
 	Name            string                  `json:"name"`
 	Code            string                  `gorm:"<-:create" json:"code"`
 	Description     *string                 `json:"description,omitempty"`

@@ -23,6 +23,7 @@ func (cs PoolStatus) String() string {
 // Pool model
 type Pool struct {
 	Base
+	TenantID   int64         `json:"tenant_id"`
 	Campaign   *Campaign     `json:"campaign,omitempty"`
 	CampaignID *int64        `json:"campaign_id"`
 	RewardPool []*RewardPool `json:"reward_pools,omitempty"`
