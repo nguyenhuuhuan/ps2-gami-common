@@ -28,6 +28,7 @@ type RewardPool struct {
 	Status        RewardPoolStatus `gorm:"column:status" json:"status"`
 	Probability   float64          `gorm:"-"`
 	ForCampaignID int64            `gorm:"-"`
+	TenantID      int64            `json:"tenant_id"`
 }
 
 // BeforeCreate Reward Pool
