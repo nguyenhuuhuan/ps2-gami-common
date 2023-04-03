@@ -28,6 +28,7 @@ const (
 // Rule Models
 type Rule struct {
 	Base
+	TenantID     int64      `json:"tenant_id"`
 	Name         string     `json:"name"`
 	RuleID       *int64     `json:"rule_id"`
 	Campaign     *Campaign  `json:"campaign,omitempty"`
