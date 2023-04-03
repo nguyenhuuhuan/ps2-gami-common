@@ -39,6 +39,7 @@ type Rule struct {
 	Quantity     int64      `json:"quantity"`
 	Deeplink     string     `json:"deeplink"`
 	RewardPoolID int64      `gorm:"-" json:"reward_pool_id,omitempty"`
+	PoolID       int64      `gorm:"-" json:"pool_id,omitempty"`
 	IsShown      bool       `json:"is_shown"`
 	UniqueKey    string     `json:"unique_key,omitempty" gorm:"-" `
 	ExtraData    *JSON      `json:"extra_data,omitempty" sql:"type:json"`
