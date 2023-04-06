@@ -15,6 +15,7 @@ type Transaction struct {
 	UpdatedAt  time.Time  `json:"updated_at"`
 	DeletedAt  *time.Time `sql:"index"`
 	UserID     string     `json:"user_id"`
+	TenantID   int64      `json:"tenant_id"`
 	RewardID   int64      `json:"reward_id"`
 	Reward     *Reward    `json:"reward,omitempty"`
 	CampaignID int64      `json:"campaign_id"`

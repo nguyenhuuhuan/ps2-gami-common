@@ -8,6 +8,7 @@ type Redeem struct {
 	RuleID       int64           `json:"rule_id"`
 	RuleCode     string          `json:"rule_code"`
 	UserID       string          `json:"user_id"`
+	TenantID     int64           `json:"tenant_id"`
 	Name         string          `json:"name"`
 	Code         string          `json:"code"`
 	IsManual     bool            `json:"is_manual"`

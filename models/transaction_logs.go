@@ -10,6 +10,7 @@ import (
 type TransactionLogs struct {
 	ID                string    `gorm:"type:uuid;primaryKey;"`
 	UserID            string    `json:"user_id"`
+	TenantID          int64     `json:"tenant_id"`
 	CampaignID        int64     `json:"campaign_id"`
 	Campaign          *Campaign `json:"campaign,omitempty"`
 	RewardID          int64     `json:"reward_id"`
