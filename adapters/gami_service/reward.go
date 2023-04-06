@@ -71,6 +71,7 @@ type GetRewardsByCampaignIDResponse struct {
 // RedeemRequest struct
 type RedeemRequest struct {
 	CampaignID   int64           `json:"campaign_id"`
+	TenantID     int64           `json:"tenant_id"`
 	UserID       string          `json:"user_id"`
 	RewardPoolID int64           `json:"reward_pool_id"`
 	Quantity     int             `json:"quantity"`
