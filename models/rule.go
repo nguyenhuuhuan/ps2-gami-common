@@ -56,6 +56,7 @@ type RuleLog struct {
 	Campaign   *Campaign `json:"campaign,omitempty"`
 	Rule       Rule      `json:"rule"`
 	UserID     string    `json:"user_id"`
+	TenantID   int64     `json:"tenant_id"`
 	ExtraData  *JSON     `json:"extra_data,omitempty" sql:"type:json"`
 	CreatedAt  time.Time `json:"created_at"`
 }
