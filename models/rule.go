@@ -41,6 +41,7 @@ type Rule struct {
 	Deeplink     string     `json:"deeplink"`
 	RewardPoolID int64      `gorm:"-" json:"reward_pool_id,omitempty"`
 	PoolID       int64      `gorm:"-" json:"pool_id,omitempty"`
+	PoolCode     string     `gorm:"-" json:"pool_code,omitempty"`
 	RewardCode   string     `gorm:"-" json:"reward_code,omitempty"`
 	IsShown      bool       `json:"is_shown"`
 	UniqueKey    string     `json:"unique_key,omitempty" gorm:"-" `
