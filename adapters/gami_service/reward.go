@@ -272,6 +272,7 @@ func encodeRedeemRequest(_ context.Context, req interface{}) (request interface{
 	return &gami_protobuf.RedeemRequest{
 		CampaignID:   r.CampaignID,
 		UserID:       r.UserID,
+		TenantID:     r.TenantID,
 		Quantity:     int64(r.Quantity),
 		RewardPoolID: r.RewardPoolID,
 		PoolID:       r.PoolID,
