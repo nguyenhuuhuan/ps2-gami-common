@@ -22,6 +22,7 @@ type TransactionLogs struct {
 	Response          *JSON     `sql:"type:json" json:"response,omitempty"`
 	CreatedAt         time.Time `json:"created_at"`
 	UpdatedAt         time.Time `json:"updated_at"`
+	IsSuccess         bool      `json:"is_success"`
 }
 
 // BeforeCreate transaction uuid
