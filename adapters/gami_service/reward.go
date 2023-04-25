@@ -76,6 +76,7 @@ type RedeemRequest struct {
 	RewardPoolID int64           `json:"reward_pool_id"`
 	Quantity     int             `json:"quantity"`
 	PoolID       int64           `json:"pool_id"`
+	RuleID       int64           `json:"rule_id"`
 	ExtraData    json.RawMessage `json:"extra_data,omitempty"`
 }
 
