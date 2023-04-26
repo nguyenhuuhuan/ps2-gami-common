@@ -278,6 +278,7 @@ func encodeRedeemRequest(_ context.Context, req interface{}) (request interface{
 		RewardPoolID: r.RewardPoolID,
 		PoolID:       r.PoolID,
 		ExtraData:    r.ExtraData,
+		RuleID:       r.RuleID,
 	}, nil
 }
 
