@@ -1537,3 +1537,17 @@ func (_m *CachedV2Adapter) SetNX(ctx context.Context, key string, value interfac
 
 	return r0, r1
 }
+
+// Lock provides a mock function with given fields: ctx, key, expiration, acquire, interval
+func (_m *CachedV2Adapter) Lock(ctx context.Context, key string, expiration time.Duration, acquire time.Duration, interval time.Duration) error {
+	ret := _m.Called(ctx, key, expiration, acquire, interval)
+
+	var r0 error
+	if rf, ok := ret.Get(0).(func(context.Context, string, time.Duration, time.Duration, time.Duration) error); ok {
+		r0 = rf(ctx, key, expiration, acquire, interval)
+	} else {
+		r0 = ret.Error(0)
+	}
+
+	return r0
+}

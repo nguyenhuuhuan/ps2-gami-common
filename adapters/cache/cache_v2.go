@@ -96,6 +96,7 @@ type CachedV2Adapter interface {
 	AppendIntArray(ctx context.Context, key string, value []int64) (bool, error)
 	ROptimize(ctx context.Context, key string) (bool, error)
 	SetNX(ctx context.Context, key string, value interface{}, expiration time.Duration) (bool, error)
+	Lock(ctx context.Context, key string, expiration time.Duration, acquire time.Duration, interval time.Duration) error
 }
 
 type cachedV2Adapter struct {
@@ -750,4 +751,43 @@ func (r *cachedV2Adapter) SetNX(ctx context.Context, key string, value interface
 	defer cancel()
 
 	return r.client.SetNX(ctx, key, value, expiration).Result()
+}
+
+func (r *cachedV2Adapter) Lock(ctx context.Context, key string, expiration time.Duration, acquire time.Duration, interval time.Duration) error {
+	ctx, cancel := context.WithDeadline(ctx, time.Now().Add(longTerm))
+	defer cancel()
+
+	resp := r.client.SetNX(ctx, key, 1, expiration)
+	lockSuccess, err := resp.Result()
+
+	if err != nil {
+		return err
+	}
+
+	if lockSuccess {
+		return nil
+	}
+
+	ticker := time.NewTicker(interval)
+	defer func() {
+		ticker.Stop()
+	}()
+	timer := time.After(acquire)
+	for {
+		select {
+		case <-timer:
+			return errors.New("acquired lock timeout")
+		case <-ticker.C:
+			resp = r.client.SetNX(ctx, key, 1, expiration)
+			lockSuccess, err = resp.Result()
+
+			if err != nil {
+				return err
+			}
+
+			if lockSuccess {
+				return nil
+			}
+		}
+	}
 }
