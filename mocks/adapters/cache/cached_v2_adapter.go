@@ -1516,3 +1516,24 @@ func NewCachedV2Adapter(t mockConstructorTestingTNewCachedV2Adapter) *CachedV2Ad
 
 	return mock
 }
+
+// SetNX provides a mock function with given fields: ctx, key, value, expiration
+func (_m *CachedV2Adapter) SetNX(ctx context.Context, key string, value interface{}, expiration time.Duration) (bool, error) {
+	ret := _m.Called(ctx, key, value, expiration)
+
+	var r0 bool
+	if rf, ok := ret.Get(0).(func(context.Context, string, interface{}, time.Duration) bool); ok {
+		r0 = rf(ctx, key, value, expiration)
+	} else {
+		r0 = ret.Get(0).(bool)
+	}
+
+	var r1 error
+	if rf, ok := ret.Get(1).(func(context.Context, string, interface{}, time.Duration) error); ok {
+		r1 = rf(ctx, key, value, expiration)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
