@@ -95,6 +95,7 @@ type CachedV2Adapter interface {
 	RAppendIntArray(ctx context.Context, key string, value []int64) (bool, error)
 	AppendIntArray(ctx context.Context, key string, value []int64) (bool, error)
 	ROptimize(ctx context.Context, key string) (bool, error)
+	SetNX(ctx context.Context, key string, value interface{}, expiration time.Duration) (bool, error)
 }
 
 type cachedV2Adapter struct {
@@ -742,4 +743,11 @@ func (r *cachedV2Adapter) ROptimize(ctx context.Context, key string) (bool, erro
 	cmd := redis.NewBoolCmd(ctx, "R.OPTIMIZE", key)
 	_ = r.client.Process(ctx, cmd)
 	return cmd.Result()
+}
+
+func (r *cachedV2Adapter) SetNX(ctx context.Context, key string, value interface{}, expiration time.Duration) (bool, error) {
+	ctx, cancel := context.WithDeadline(ctx, time.Now().Add(midTerm))
+	defer cancel()
+
+	return r.client.SetNX(ctx, key, value, expiration).Result()
 }
