@@ -106,6 +106,29 @@ func (_m *Adapter) GetCampaignByID(ctx context.Context, id int64) (*gami_service
 	return r0, r1
 }
 
+// GetCampaignByRuleID provides a mock function with given fields: ctx, ruleId
+func (_m *Adapter) GetCampaignByRuleID(ctx context.Context, ruleId int64) (*gami_service.GetCampaignResponse, error) {
+	ret := _m.Called(ctx, ruleId)
+
+	var r0 *gami_service.GetCampaignResponse
+	if rf, ok := ret.Get(0).(func(context.Context, int64) *gami_service.GetCampaignResponse); ok {
+		r0 = rf(ctx, ruleId)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gami_service.GetCampaignResponse)
+		}
+	}
+
+	var r1 error
+	if rf, ok := ret.Get(1).(func(context.Context, int64) error); ok {
+		r1 = rf(ctx, ruleId)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCampaignByUser provides a mock function with given fields: ctx, id, userID
 func (_m *Adapter) GetCampaignByUser(ctx context.Context, id int64, userID int64) (*gami_service.GetCampaignResponse, error) {
 	ret := _m.Called(ctx, id, userID)

@@ -30,6 +30,7 @@ type Adapter interface {
 	GetBlackWhiteList(ctx context.Context, campaignID int64) (*GetBlackWhiteListResponse, error)
 	GetRewardsByCampaignID(ctx context.Context, req GetRewardsByCampaignIDRequest) (*GetRewardsByCampaignIDResponse, error)
 	GetCampaignByUserV2(ctx context.Context, id, userID int64) (*GetCampaignResponse, error)
+	GetCampaignByRuleID(ctx context.Context, ruleId int64) (*GetCampaignResponse, error)
 }
 
 type adapter struct {
@@ -51,6 +52,19 @@ type adapter struct {
 	GetBlackWhiteListEndpoint             endpoint.Endpoint
 	GetRewardsByCampaignIDEndpoint        endpoint.Endpoint
 	GetCampaignByUserV2Endpoint           endpoint.Endpoint
+	GetCampaignByRuleIDEndpoint           endpoint.Endpoint
+}
+
+func (a *adapter) GetCampaignByRuleID(ctx context.Context, ruleId int64) (*GetCampaignResponse, error) {
+	response, err := a.GetCampaignByRuleIDEndpoint(ctx, ruleId)
+	if err != nil {
+		return nil, err
+	}
+	r, ok := response.(*GetCampaignResponse)
+	if !ok {
+		return nil, errors.New(errors.ErrorCode{})
+	}
+	return r, nil
 }
 
 func (a *adapter) GetBlackWhiteList(ctx context.Context, campaignID int64) (*GetBlackWhiteListResponse, error) {
@@ -345,6 +359,13 @@ func NewAdapter(ctx context.Context, connection *grpc.ClientConn) Adapter {
 			"GetByUserV2",
 			encodeGetCampaignUserRequest,
 			decodeGetCampaignResponse,
+			gamiProtobuf.GetCampaignResponse{},
+		).Endpoint(),
+		GetCampaignByRuleIDEndpoint: grpc_client.NewgRPCClient(
+			connection, "gami_protobuf.CampaignService",
+			"GetCampaignByRuleID",
+			encodeGetCampaignByRuleIDRequest,
+			decodeGetCampaignByRuleIDResponse,
 			gamiProtobuf.GetCampaignResponse{},
 		).Endpoint(),
 	}

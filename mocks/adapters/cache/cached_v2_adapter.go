@@ -811,6 +811,20 @@ func (_m *CachedV2Adapter) LRem(ctx context.Context, key string, val interface{}
 	return r0, r1
 }
 
+// Lock provides a mock function with given fields: ctx, key, expiration, acquire, interval
+func (_m *CachedV2Adapter) Lock(ctx context.Context, key string, expiration time.Duration, acquire time.Duration, interval time.Duration) error {
+	ret := _m.Called(ctx, key, expiration, acquire, interval)
+
+	var r0 error
+	if rf, ok := ret.Get(0).(func(context.Context, string, time.Duration, time.Duration, time.Duration) error); ok {
+		r0 = rf(ctx, key, expiration, acquire, interval)
+	} else {
+		r0 = ret.Error(0)
+	}
+
+	return r0
+}
+
 // MGet provides a mock function with given fields: ctx, keys
 func (_m *CachedV2Adapter) MGet(ctx context.Context, keys []string) ([]interface{}, error) {
 	ret := _m.Called(ctx, keys)
@@ -1200,6 +1214,27 @@ func (_m *CachedV2Adapter) SetBit(ctx context.Context, key string, offset int64,
 	return r0
 }
 
+// SetNX provides a mock function with given fields: ctx, key, value, expiration
+func (_m *CachedV2Adapter) SetNX(ctx context.Context, key string, value interface{}, expiration time.Duration) (bool, error) {
+	ret := _m.Called(ctx, key, value, expiration)
+
+	var r0 bool
+	if rf, ok := ret.Get(0).(func(context.Context, string, interface{}, time.Duration) bool); ok {
+		r0 = rf(ctx, key, value, expiration)
+	} else {
+		r0 = ret.Get(0).(bool)
+	}
+
+	var r1 error
+	if rf, ok := ret.Get(1).(func(context.Context, string, interface{}, time.Duration) error); ok {
+		r1 = rf(ctx, key, value, expiration)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SetString provides a mock function with given fields: ctx, key, v, expiration
 func (_m *CachedV2Adapter) SetString(ctx context.Context, key string, v interface{}, expiration time.Duration) error {
 	ret := _m.Called(ctx, key, v, expiration)
@@ -1515,39 +1550,4 @@ func NewCachedV2Adapter(t mockConstructorTestingTNewCachedV2Adapter) *CachedV2Ad
 	t.Cleanup(func() { mock.AssertExpectations(t) })
 
 	return mock
-}
-
-// SetNX provides a mock function with given fields: ctx, key, value, expiration
-func (_m *CachedV2Adapter) SetNX(ctx context.Context, key string, value interface{}, expiration time.Duration) (bool, error) {
-	ret := _m.Called(ctx, key, value, expiration)
-
-	var r0 bool
-	if rf, ok := ret.Get(0).(func(context.Context, string, interface{}, time.Duration) bool); ok {
-		r0 = rf(ctx, key, value, expiration)
-	} else {
-		r0 = ret.Get(0).(bool)
-	}
-
-	var r1 error
-	if rf, ok := ret.Get(1).(func(context.Context, string, interface{}, time.Duration) error); ok {
-		r1 = rf(ctx, key, value, expiration)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// Lock provides a mock function with given fields: ctx, key, expiration, acquire, interval
-func (_m *CachedV2Adapter) Lock(ctx context.Context, key string, expiration time.Duration, acquire time.Duration, interval time.Duration) error {
-	ret := _m.Called(ctx, key, expiration, acquire, interval)
-
-	var r0 error
-	if rf, ok := ret.Get(0).(func(context.Context, string, time.Duration, time.Duration, time.Duration) error); ok {
-		r0 = rf(ctx, key, expiration, acquire, interval)
-	} else {
-		r0 = ret.Error(0)
-	}
-
-	return r0
 }

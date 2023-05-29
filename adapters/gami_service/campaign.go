@@ -87,6 +87,10 @@ type AcceptChallengeResponse struct {
 	Meta dtos.Meta `json:"meta"`
 }
 
+type GetCampaignByRuleID struct {
+	RuleID int64 `json:"rule_id"`
+}
+
 type RewardAmountStatisticRequest struct {
 	UserID     string `json:"user_id"`
 	CampaignID int64  `json:"campaign_id"`
@@ -166,6 +170,16 @@ func encodeAcceptChallengeRequest(_ context.Context, req interface{}) (interface
 	return &gami_protobuf.AcceptChallengeRequest{
 		UserID:     r.UserID,
 		CampaignID: r.CampaignID,
+	}, nil
+}
+
+func encodeGetCampaignByRuleIDRequest(_ context.Context, req interface{}) (interface{}, error) {
+	r, ok := req.(*GetCampaignByRuleID)
+	if !ok {
+		return nil, errors.New("cast error")
+	}
+	return &gami_protobuf.GetCampaignByRuleIDRequest{
+		RuleID: r.RuleID,
 	}, nil
 }
 
@@ -258,4 +272,31 @@ func decodeRewardAmountStatisticResponse(_ context.Context, resp interface{}) (i
 		},
 		Amount: r.Amount,
 	}, nil
+}
+
+func decodeGetCampaignByRuleIDResponse(_ context.Context, resp interface{}) (interface{}, error) {
+	r, ok := resp.(*gami_protobuf.GetCampaignResponse)
+	if !ok {
+		return nil, errors.New("cast error")
+	}
+	if r.Meta.Status != http.StatusOK {
+		return &GetCampaignResponse{
+			Meta: dtos.Meta{
+				Code:    int(r.Meta.Status),
+				Message: r.Meta.Message,
+			},
+		}, nil
+	}
+	campaignData := Campaign{}
+	_ = copier.Copy(&campaignData, r.Data)
+
+	data := GetCampaignResponse{
+		Meta: dtos.Meta{
+			Code:    int(r.Meta.Status),
+			Message: r.Meta.Message,
+		},
+		Data: &campaignData,
+	}
+
+	return &data, nil
 }

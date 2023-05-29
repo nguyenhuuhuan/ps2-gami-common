@@ -486,8 +486,8 @@ gitlab.id.vin/gami/go-agent/v3 v3.3.0 h1:2llK7lOG4ynOvNqA1nFfb87hELRWd/b7Ur3gB6W
 gitlab.id.vin/gami/go-agent/v3 v3.3.0/go.mod h1:mjVpyswRG4QxrHOM0WRBRZOD4odXibENmXDhTNA1TyA=
 gitlab.id.vin/gami/go-agent/v3/integrations/nrmysql v0.0.0-20220107092240-98da8feaa550 h1:RJvRz6VZjKq6pZUwAO4c1gE1n4ssfJTZcL+GlZBP5is=
 gitlab.id.vin/gami/go-agent/v3/integrations/nrmysql v0.0.0-20220107092240-98da8feaa550/go.mod h1:nC6Ake6XhqwZTrsNOTRLmn93KP4lHXSNDxD/p3RH5vU=
-gitlab.id.vin/gami/ps2-gami-proto v0.0.5 h1:xigaJJWOsuw/gL/a8XMGs849z1YBnO1WrBuS8S3SIK8=
-gitlab.id.vin/gami/ps2-gami-proto v0.0.5/go.mod h1:s/DUjQZFCCfsGix00lTqYoK9ac0j2q1pI870GUK+RNk=
+gitlab.id.vin/gami/ps2-gami-proto v0.0.6 h1:2CnjflTTX8/WzdzNCitxG6cYY5ceJMTFXQ/HXM5d9/4=
+gitlab.id.vin/gami/ps2-gami-proto v0.0.6/go.mod h1:s/DUjQZFCCfsGix00lTqYoK9ac0j2q1pI870GUK+RNk=
 go.etcd.io/etcd/api/v3 v3.5.0/go.mod h1:cbVKeC6lCfl7j/8jBhAK6aIYO9XOjdptoxU/nLQcPvs=
 go.etcd.io/etcd/client/pkg/v3 v3.5.0/go.mod h1:IJHfcCEKxYu1Os13ZdwCwIUTUVGYTSAM3YSwc9/Ac1g=
 go.etcd.io/etcd/client/v2 v2.305.0/go.mod h1:h9puh54ZTgAKtEbut2oe9P4L/oqKCVB6xsXlzd7alYQ=
