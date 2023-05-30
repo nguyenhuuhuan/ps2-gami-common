@@ -56,7 +56,9 @@ type adapter struct {
 }
 
 func (a *adapter) GetCampaignByRuleID(ctx context.Context, ruleId int64) (*GetCampaignResponse, error) {
-	response, err := a.GetCampaignByRuleIDEndpoint(ctx, ruleId)
+	response, err := a.GetCampaignByRuleIDEndpoint(ctx, GetCampaignByRuleID{
+		RuleID: ruleId,
+	})
 	if err != nil {
 		return nil, err
 	}
