@@ -14,6 +14,7 @@ func (cs FormBuilderTemplateStatus) String() string {
 type FormBuilderTemplate struct {
 	Base
 	TenantID    int64                     `json:"tenant_id"`
+	Code        string                    `json:"code"`
 	Name        string                    `json:"name"`
 	Type        string                    `json:"type"`
 	Description string                    `json:"description"`
