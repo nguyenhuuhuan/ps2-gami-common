@@ -19,5 +19,5 @@ type FormBuilderTemplate struct {
 	Type        string                    `json:"type"`
 	Description string                    `json:"description"`
 	Status      FormBuilderTemplateStatus `json:"status"`
-	Template    JSON                      `json:"template"`
+	Template    string                    `json:"template"`
 }
